@@ -52,11 +52,11 @@ trait AssertArray
         return array_replace_recursive($expect, $actual);
     }
 
-    public function search(array $expect, string $columnName, string $needle)
+    private function search(array $expect, string $columnName, string $needle): array
     {
         $key = array_search($needle, $this->getColumn($expect, $columnName), true);
 
-        return $key === false ? null : $expect[$key];
+        return $key === false ? [] : $expect[$key];
     }
 
     private function getColumn(array $expect, string $columnName): array

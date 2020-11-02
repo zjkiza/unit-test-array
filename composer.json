@@ -15,13 +15,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Tests\\": "tests/",
       "ZJKiza\\Testing\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "ZJKiza\\UnitTestArray\\Tests\\": "tests"
+      "ZJKiza\\UnitTestArray\\Tests\\": "tests/"
     }
   }
 }
