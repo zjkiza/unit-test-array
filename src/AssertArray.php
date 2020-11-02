@@ -12,7 +12,7 @@ use PHPUnit\Framework\Assert as PHPUnitAssert;
 
 trait AssertArray
 {
-    public function assertArraySubsetSame(array $expect , array $actual): void
+    public function assertArraySubsetSame(array $expect, array $actual): void
     {
         PHPUnitAssert::assertSame(
             $this->processingArray($expect, $actual),
@@ -20,7 +20,7 @@ trait AssertArray
             'An array does not contain a subset of another array');
     }
 
-    public function assertArraySubsetEqual(array $expect , array $actual): void
+    public function assertArraySubsetEqual(array $expect, array $actual): void
     {
         PHPUnitAssert::assertEquals(
             $this->processingArray($expect, $actual),
@@ -28,7 +28,7 @@ trait AssertArray
             'An array does not contain a subset of another array');
     }
 
-    public function assertArrayEqualsKeys(array $expect, array  $actual): void
+    public function assertArrayEqualsKeys(array $expect, array $actual): void
     {
         PHPUnitAssert::assertCount(
             0,
@@ -37,7 +37,7 @@ trait AssertArray
         );
     }
 
-    public function assertArrayFragmentSame(array $expect , array $actual, string $columnName, string $needle): void
+    public function assertArrayFragmentSame(array $expect, array $actual, string $columnName, string $needle): void
     {
         $catExpect = $this->search($expect, $columnName, $needle);
 
@@ -47,7 +47,7 @@ trait AssertArray
             'An array does not contain a subset of another array');
     }
 
-    private function processingArray(array $expect , array $actual): array
+    private function processingArray(array $expect, array $actual): array
     {
         return array_replace_recursive($expect, $actual);
     }
