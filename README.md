@@ -22,27 +22,27 @@ class AssertArraySubset extends TestCase
 } 
 ```
 
-##Assertions
+## Assertions
 
-If the array $actual is part of an array $expect. Checks if are of the same type.
+Verifies the action array $actual is part of an array $expect. Checks if are of the same type.
 
 ``
 public function assertArraySubsetSame(array $expect , array $actual): void
 ``
 
-If the array $actual is part of an array $expect. Checks if are is equal after type juggling.
+Verifies the action array $actual is part of an array $expect. Checks if are is equal after type juggling.
 
 ``
 public function assertArraySubsetEqual(array $expect , array $actual): void
 ``
 
-If there are the same keys in the array.
+Verifies the action of there are the same keys in the array.
 
 ``
 public function assertArrayEqualsKeys(array $expect, array  $actual): void
 ``
 
-Finds a part of an array in a multidimensional array. 
+Verifies whether the array is fragment in some part of the array.
 
 ``
 public function assertArrayFragmentSame(array $expect , array $actual, string $columnName, string $needle): void
